@@ -1,4 +1,5 @@
 data/sly_json
+venv/
 model.py
 train.py
 predict.py

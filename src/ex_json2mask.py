@@ -3,11 +3,11 @@ import cv2
 import json
 import os
 
-MASK_DIR  = '../data/masks'
+MASK_DIR  = '../data/ex_masks'
 if not os.path.exists(MASK_DIR):
     os.mkdir(MASK_DIR)
 
-JSON_DIR  = '../data/jsons'
+JSON_DIR  = '../data/ex_jsons'
 json_name = 'ozan.json'
 json_path = os.path.join(JSON_DIR, json_name)
 json_file = open(json_path, 'r')
