@@ -57,7 +57,7 @@ If so, you need to get every point of the polygon by calling "exterior" of point
     point_list : [x, y]
 
 
-An example is shared in below. In the example I am reading a json file and, I am checking out if the object's id is smaller than 61. If so, I accept the object to use and extract its values, else I continue iterating.
+An example is shared in below. In the example I am reading a json file and, I am checking out if the object's id is greater than 61. If so, I accept the object and print 'I like it'
 
     import numpy as np
     import cv2
