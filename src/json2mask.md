@@ -77,7 +77,7 @@ An example is shared in below. In the example I am reading a json file and, I am
 
     for obj in json_objs:
         obj_id = obj['id']
-        if obj_id == 61:
+        if obj_id > 61:
             # this is my condition that I want
             print('I like it')
         else:
