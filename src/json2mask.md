@@ -1,3 +1,5 @@
+## INTRODUCTION
+
 In order to accomplish json2mask task, data types (list and dictionary) should be understood well.
 
 If you know/learn the aforementioned datatypes this task will be easy peasy (lemon squuezy). 
@@ -87,8 +89,31 @@ An example is shared in below. In the example I am reading a json file and, I am
             # this is my condition that I want
             obj_pts = obj['points']
             obj_ext_pts = obj_pts['exterior'] # this is the point list we want
-            cv2.fillPoly(mask, np.array([obj_ext_pts]), 255) #
+            cv2.fillPoly(mask, np.array([obj_ext_pts]), 255) # it is important to note that, you need to change 255 variable to 1 as if a pixel belongs to freespace then its label will be 1, otherwise 0. I wrote 255 in order to show you on the image.
 
             mask_name = json_name.split('.')[-1] + '.png'
             mask_path = os.path.join(MASK_DIR, mask_name)
             cv2.imwrite(mask_path, mask)
+
+## PROJECT DEFINITION
+
+In this part of the project, we want you to convert every json file into mask images as in example [json2mask example](json2mask.py). 
+
+1- You need to move your files into data/jsons folder. 
+
+2- You need to create a list which contains every file name in jsons folder.
+
+3- In a for loop, you need to read every json file and convert them into json dictionaries.
+
+4- You need to get width and height of image.
+
+5- You need to create an empty mask which will be filled with freespace polygons.
+
+6- You need to get objects in the dictionary and in a for loop you need to check the objects 'classTitle' is 'Freespace' or not.
+
+7- If it is a Freespace object, then you need to extract 'points' then 'exterior' of points which is a point list which contains every edge of polygon you clicked while labelling.
+
+8- You need to fill the mask with the array.
+
+9- You need to write mask image into data/masks folder.
+
