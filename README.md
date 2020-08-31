@@ -25,6 +25,12 @@
 
         pip install -r requirements.txt
 
+4. Run the code (for fun)
+
+    In order to run a code, you have to go to src directory, firstly.
+
+        cd src/
+        python3 ex_json2mask.py
 
 #### 1. Project: Data Preprocessing - Convert Jsons to Masks
 
