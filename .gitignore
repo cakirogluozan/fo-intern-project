@@ -1,4 +1,4 @@
-data/sly_jsons
+data/sly_json
 model.py
 train.py
 predict.py
