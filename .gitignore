@@ -1,6 +1,9 @@
-data/sly_json
 venv/
 model.py
 train.py
 predict.py
 preprocess.py
+data/jsons
+data/images
+data/masks
+data/masked_images
