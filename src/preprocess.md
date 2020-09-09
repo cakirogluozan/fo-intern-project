@@ -4,7 +4,7 @@ In order to accomplish preprocessing task, main intuition should be understood w
 
 We need to prepare the data in order to feed the network. In this task, you should have - `data/masks, data/images` - directories where your prepared masks and input images located, respectively.
 
-You need to write two functions, one for image reading and preparing, the other for mask reading and preparing.
+You need to write two functions in `src/preprocess.py`, one for image reading and preparing, the other for mask reading and preparing.
 
 1. Image Reading and Preparing
 
