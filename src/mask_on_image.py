@@ -6,7 +6,7 @@ MASK_DIR  = '../data/masks'
 IMAGE_DIR = '../data/images'
 IMAGE_OUT_DIR = '../data/masked_images'
 
-if os.path.exists(IMAGE_OUT_DIR):
+if not os.path.exists(IMAGE_OUT_DIR):
     os.mkdir(IMAGE_OUT_DIR)
 
 
