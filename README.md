@@ -34,8 +34,8 @@
 
 #### 1. Project: Data Preprocessing - Convert Jsons to Masks
 
-Proceed to [json2mask readme](src/json2mask.md)
+Proceed to [json2mask readme](json2mask.md)
 
 #### 2. Project: Data Preprocessing - Prepare data for the model
 
-Proceed to [preprocessing readme](src/preprocess.md)
+Proceed to [preprocessing readme](preprocess.md)
