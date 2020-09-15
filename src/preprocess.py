@@ -28,14 +28,16 @@ def tensorize_mask(mask_path_list, output_shape, n_class):
 
 
 def one_hot_encoder(data, n_class):
-    encoded_data = np.zeros((*data.shape, n_class), dtype=np.int) # (width, height, number_of_class)'lık bir array tanımlıyorum.
-    encoded_labels = [0] * n_class # buraya da [0, 0, .., 0] (n tane 0) bir encoded_labels, bizim durumumuz için [0, 0] oluyor bu (n=2)
+    encoded_data = np.zeros((*data.shape, n_class), dtype=np.int) # (width, height, number_of_class)'lık bir array tanımlıyorum. 
+
+    encoded_labels = [[0,1], [1,0]]
     for lbl in range(n_class):
-        encoded_labels[lbl] = 1 # lbl = 0 için (arkaplan) [1, 0] labelini oluşturuyorum, 
+
+        encoded_label = encoded_labels[lbl] # lbl = 0 için (arkaplan) [1, 0] labelini oluşturuyorum, 
                                 # lbl = 1 için (freespace) [0, 1] labelini oluşturuyorum.
         numerical_class_inds = data[:,:] == lbl # lbl = 0 için data'nın 0'a eşit olduğu w,h ikililerini alıyorum diyelim ki (F).
                                                 # lbl = 1 için data'nın 1'e eşit olduğu w,h ikililerini alıyorum diyelim ki (O).
-        encoded_data[numerical_class_inds] = encoded_labels # lbl = 0 için tüm F'in sahip olduğu tüm w,h ikililerini [1, 0]'a eşitliyorum.
+        encoded_data[numerical_class_inds] = encoded_label # lbl = 0 için tüm F'in sahip olduğu tüm w,h ikililerini [1, 0]'a eşitliyorum.
                                                             # lbl = 1 için tüm O'un sahip olduğu tüm w,h ikililerini [0, 1]'e eşitliyorum.
     return encoded_data
 
