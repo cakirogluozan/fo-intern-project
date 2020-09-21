@@ -1,6 +1,5 @@
 venv/
-model.py
-train.py
+*.pyc
 predict.py
 data/jsons
 data/images
